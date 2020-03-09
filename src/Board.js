@@ -7,15 +7,15 @@ import {hot} from "react-hot-loader";
 class Board extends React.Component {
   constructor(props) {
     super(props);
-    // an array of 9 elements. fill each element with a value of null;
     this.state = {
       squares: Array(9).fill(null)
-    }
+    };
   }
+
   renderSquare(i) {
     return <Square 
-      value={this.handleClick[i]}
-      onClick={(i)=> this.handleClick(i)}  
+      value={this.state.squares[i]}
+      onClick={()=> this.handleClick(i)}  
     />;
   }
 

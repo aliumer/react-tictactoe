@@ -5,16 +5,12 @@ import {hot} from "react-hot-loader";
 
 
 class Square extends React.Component {
-    constructor(props) {
-      super(props);
-    }
 
     render() {
-      console.log(this.props);
       return (
         <button 
           className="square" 
-          onClick={() => { this.props.onClick()}}
+          onClick={() => this.props.onClick()}
         >
           {this.props.value}
         </button>
