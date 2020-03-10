@@ -3,19 +3,10 @@ import ReactDOM from "react-dom";
 import './index.css';
 import {hot} from "react-hot-loader";
 
+function Square(props) {
+  return (
+  <button className="square" onClick={props.onClick}>{props.value}</button>
+  );
+}
 
-class Square extends React.Component {
-
-    render() {
-      return (
-        <button 
-          className="square" 
-          onClick={() => this.props.onClick()}
-        >
-          {this.props.value}
-        </button>
-      );
-    }
-  };
-
-  export default hot(module)(Square);
+export default hot(module)(Square);
